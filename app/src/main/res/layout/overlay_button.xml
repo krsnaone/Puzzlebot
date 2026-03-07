@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabSolve"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#4FFFB0"/>
+
+    <TextView
+        android:id="@+id/tvFabStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tap to solve"
+        android:textColor="#4FFFB0"
+        android:textSize="9sp"
+        android:background="#CC07090D"
+        android:padding="3dp"
+        android:layout_marginTop="4dp"/>
+
+</LinearLayout>

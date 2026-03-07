@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">PuzzleBot</string>
+    <string name="accessibility_description">PuzzleBot uses accessibility to auto-tap puzzle numbers in sequence</string>
+</resources>

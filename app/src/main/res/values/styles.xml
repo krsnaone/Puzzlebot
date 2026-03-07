@@ -1,0 +1,8 @@
+<resources>
+    <style name="Theme.PuzzleBot" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="colorPrimary">#4FFFB0</item>
+        <item name="colorPrimaryVariant">#00C97A</item>
+        <item name="colorOnPrimary">#000000</item>
+        <item name="android:windowBackground">#07090D</item>
+    </style>
+</resources>
