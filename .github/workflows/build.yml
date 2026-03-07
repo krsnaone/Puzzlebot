@@ -22,13 +22,11 @@ jobs:
       - name: Set up Android SDK
         uses: android-actions/setup-android@v3
 
-      - name: Create gradlew script
+      - name: Download and setup Gradle
         run: |
-          cat > gradlew << 'EOF'
-          #!/bin/sh
-          exec "$(dirname "$0")/gradle/wrapper/gradle-wrapper.jar" org.gradle.wrapper.GradleWrapperMain "$@"
-          EOF
-          chmod +x gradlew
+          wget -q https://services.gradle.org/distributions/gradle-8.1.1-bin.zip
+          unzip -q gradle-8.1.1-bin.zip -d $HOME
+          echo "$HOME/gradle-8.1.1/bin" >> $GITHUB_PATH
 
       - name: Generate release keystore
         run: |
@@ -44,7 +42,7 @@ jobs:
 
       - name: Build Release APK
         run: |
-          ./gradlew assembleRelease \
+          gradle assembleRelease \
             -Pandroid.injected.signing.store.file=$GITHUB_WORKSPACE/puzzlebot.keystore \
             -Pandroid.injected.signing.store.password=puzzlebot123 \
             -Pandroid.injected.signing.key.alias=puzzlebot \
